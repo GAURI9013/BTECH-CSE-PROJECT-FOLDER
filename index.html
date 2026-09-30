@@ -1,50 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="hi">
 <head>
-<title>Mathura-Vrindavan Darshan Guide | By Gauri Sharma</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Braj Darshan 3D - Open Box</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
-body{font-family:Arial; background:#fff8e1; margin:0; padding:0}
-.header{background:#d32f2f; color:white; padding:20px; text-align:center}
-.card{background:white; margin:15px; padding:15px; border-radius:10px; box-shadow:0 2px 5px gray}
-.tag{background:#ffe082; padding:3px 8px; border-radius:5px; font-size:12px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:#08070A;color:#fff;perspective:1200px}
+nav{position:fixed;top:0;width:100%;padding:14px 5%;display:flex;justify-content:space-between;z-index:99;background:rgba(8,7,10,0.75);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,215,0,0.15)}
+.logo{font-weight:800}.logo b{color:#FFD700}
+.hero{height:85vh;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(700px 400px at 50% 0%, rgba(255,180,0,0.22), transparent), #08070A}
+.hero h1{font-size:clamp(2.8rem,6vw,5rem);line-height:0.9;font-weight:800}
+.hero h1 span{background:linear-gradient(90deg,#FFD700,#FF7A00);-webkit-background-clip:text;color:transparent}
+.btn{margin-top:18px;display:inline-block;padding:12px 28px;border-radius:100px;background:linear-gradient(90deg,#FFD700,#FF6A00);color:#111;font-weight:700;text-decoration:none;box-shadow:0 10px 25px rgba(255,106,0,0.4)}
+.section{padding:60px 6%;background:#0F0D0B}
+.section h2{text-align:center;font-size:2.3rem}.section h2 b{color:#FFD700}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;margin-top:35px}
+.card{border-radius:22px;padding:1px;background:linear-gradient(135deg,#FFD700, #FF6A00, transparent);cursor:pointer;transform-style:preserve-3d;transition:0.5s}
+.card:hover{transform:translateY(-8px) rotateY(-6deg) rotateX(5deg);box-shadow:0 20px 50px rgba(0,0,0,0.5)}
+.card-inner{background:linear-gradient(180deg,#1E1A14,#11100E);border-radius:21px;padding:22px;min-height:240px;position:relative}
+.icon{width:62px;height:62px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:30px;background:linear-gradient(135deg,#FFD700,#FF6A00);box-shadow:0 8px 20px rgba(255,106,0,0.4)}
+.tag{margin-top:12px;display:inline-block;font-size:0.66rem;padding:4px 10px;border-radius:100px;background:rgba(255,215,0,0.12);border:1px solid rgba(255,215,0,0.25);color:#FFD700}
+.card-inner h3{margin:10px 0 6px}
+.card-inner p{opacity:0.6;font-size:0.88rem;line-height:1.5}
+.click{margin-top:12px;font-size:0.75rem;color:#FFD700;opacity:0.9}
+
+/* POPUP BOX */
+.popup{position:fixed;inset:0;background:rgba(0,0,0,0.7);backdrop-filter:blur(12px);display:none;align-items:center;justify-content:center;z-index:200;padding:6%}
+.popup.active{display:flex}
+.popup-box{background:linear-gradient(180deg,#201C16,#12100E);border:1px solid rgba(255,215,0,0.25);border-radius:24px;padding:30px;max-width:500px;width:100%;transform:scale(0.8);animation:pop 0.4s forwards;position:relative;box-shadow:0 30px 80px rgba(0,0,0,0.7), 0 0 40px rgba(255,215,0,0.15)}
+@keyframes pop{to{transform:scale(1)}}
+.close{position:absolute;top:14px;right:16px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.popup-box h2{color:#FFD700;margin-top:10px}
+.popup-box p{margin-top:10px;opacity:0.7;line-height:1.7;font-size:0.95rem}
+.footer{padding:26px;text-align:center;background:#050403;border-top:1px solid rgba(255,215,0,0.12);opacity:0.6}
 </style>
 </head>
 <body>
-<div class="header">
-<h1>🙏 Mathura-Vrindavan Smart Darshan Guide</h1>
-<p>B.Tech CSE Project 2026 | Created by Gauri Sharma</p>
-</div>
+<nav><div class="logo">BRAJ <b>DARSHAN 3D</b></div><div style="font-size:0.75rem;opacity:0.6">CLICK TO OPEN BOX</div></nav>
 
-<div class="card">
-<h2>1. Banke Bihari Mandir, Vrindavan</h2>
-<p><span class="tag">Aarti: 7:45 AM & 6:30 PM</span> <span class="tag">Bheed: Bahut Zyada</span></p>
-<p>Best Time to Visit: 7 AM se pehle. Phool Bangla darshan Wednesday & Sunday.</p>
-</div>
+<section class="hero"><div><h1>राधे राधे<br><span>Mathura Vrindavan</span></h1><p style="opacity:0.6;margin-top:10px">Card pe click karo - box khulega</p><a href="#grid" class="btn">Darshan Karo ✨</a></div></section>
 
-<div class="card">
-<h2>2. Prem Mandir, Vrindavan</h2>
-<p><span class="tag">Light Show: 7:30 PM</span> <span class="tag">Entry: Free</span></p>
-<p>White marble temple, raat me lights me sabse sundar lagta hai.</p>
-</div>
+<section class="section" id="grid">
+<h2>Click Karo <b>Khulega</b></h2>
+<div class="grid">
 
-<div class="card">
-<h2>3. Shri Krishna Janmabhoomi, Mathura</h2>
-<p><span class="tag">Aarti: 5:30 AM</span> <span class="tag">Bheed: Medium</span></p>
-<p>Shri Krishna ka janm sthan. Mobile andar allowed nahi hai.</p>
-</div>
+<div class="card" onclick="openBox('Janmabhoomi','Mathura me Kansa ke karagar me janm hua. Yahan 2 mandir hain - ek jail cell, dusra bada mandir. Janmashtami pe lakhon aate hain.','🛕')"><div class="card-inner"><div class="icon">🛕</div><span class="tag">MATHURA</span><h3>Krishna Janmabhoomi</h3><p>Kansa ki jail me janm sthal...</p><div class="click">👉 Click to open</div></div></div>
 
-<div class="card">
-<h2>4. ISKCON Temple</h2>
-<p><span class="tag">Aarti: 4:30 AM Mangala</span> <span class="tag">Peaceful</span></p>
-<p>Shant jagah, foreigners zyada aate hain.</p>
-</div>
+<div class="card" onclick="openBox('Banke Bihari','Vrindavan ka sabse famous mandir. Bihari ji ki aankhein itni tez hain ki parda baar-baar lagta hai. Sham ko phool bangla dekho.','🦚')"><div class="card-inner"><div class="icon">🦚</div><span class="tag">VRINDAVAN</span><h3>Banke Bihari Ji</h3><p>Tedhi nazar wale Bihari ji...</p><div class="click">👉 Click to open</div></div></div>
 
-<div class="card" style="background:#d32f2f; color:white; text-align:center">
-<h3>Project Features</h3>
-<p>✔ Live Aarti Timings ✔ Crowd Status ✔ Local Auto Guide</p>
-<p>This is a B.Tech CSE Minor Project</p>
-</div>
+<div class="card" onclick="openBox('Prem Mandir','1000 karigar, 11 saal me bana safed marble ka mandir. Din me white, raat me lights se golden. Andar Krishna leela ki jhalkiyan.','✨')"><div class="card-inner"><div class="icon">✨</div><span class="tag">VRINDAVAN</span><h3>Prem Mandir</h3><p>White marble ka divya mahal...</p><div class="click">👉 Click to open</div></div></div>
 
+<div class="card" onclick="openBox('Govardhan','21km ki parikrama - paon paon pe Radhe Radhe. Wahi parvat jo Krishna ne 7 din tak chhoti ungli pe uthaya tha Indra ka ghamand todne ko.','⛰️')"><div class="card-inner"><div class="icon">⛰️</div><span class="tag">GOVARDHAN</span><h3>Govardhan Parikrama</h3><p>21km ki pavitra yatra...</p><div class="click">👉 Click to open</div></div></div>
+
+<div class="card" onclick="openBox('Barsana','Radha Rani ka janm sthal. 200 seedhiyan, upar se pura Braj dikhta hai. Lathmar Holi yahin kheli jati hai.','👑')"><div class="card-inner"><div class="icon">👑</div><span class="tag">BARSANA</span><h3>Radha Rani Mandir</h3><p>Pahadi par Radha Rani ka mahal...</p><div class="click">👉 Click to open</div></div></div>
+
+<div class="card" onclick="openBox('Nidhivan','Raat ko yahan koi nahi rukta. Kehte hain Raas ke baad Tulsi ke ped gopiyan ban jate hain. Subah ped ki tahniyan tooti milti hain.','🌳')"><div class="card-inner"><div class="icon">🌳</div><span class="tag">NIDHIVAN</span><h3>Nidhivan Raas Sthal</h3><p>Mysterious raat wala van...</p><div class="click">👉 Click to open</div></div></div>
+
+</div>
+</section>
+
+<div class="popup" id="popup" onclick="closeBox()"><div class="popup-box" onclick="event.stopPropagation()"><div class="close" onclick="closeBox()">✕</div><div id="popIcon" style="font-size:50px"></div><h2 id="popTitle"></h2><p id="popDesc"></p><div style="margin-top:18px"><a href="#" class="btn" onclick="closeBox()">Radhe Radhe 🙏</a></div></div></div>
+
+<div class="footer"><h3 style="color:#FFD700">राधे राधे 🙏</h3><p>Made by Gauri Sharma | Click to Open 3D Box Design</p></div>
+
+<script>
+function openBox(title,desc,icon){
+document.getElementById('popTitle').innerText=title;
+document.getElementById('popDesc').innerText=desc;
+document.getElementById('popIcon').innerText=icon;
+document.getElementById('popup').classList.add('active');
+}
+function closeBox(){document.getElementById('popup').classList.remove('active');}
+</script>
 </body>
 </html>
